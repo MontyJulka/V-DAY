@@ -330,20 +330,23 @@
 
         /* Full Letter View */
         #letter-view {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(5px);
-            z-index: 50;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    z-index: 50;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    overflow-y: auto;   /* ADD THIS */
+    padding: 20px;      /* ADD THIS */
+}
+
 
         #letter-view.active {
             display: flex;
@@ -362,6 +365,9 @@
             line-height: 25px;
             transform: scale(0.8);
             transition: transform 0.5s ease;
+            max-height: 90vh;
+overflow-y: auto;
+
         }
 
         #letter-view.active .love-letter {
@@ -473,7 +479,7 @@
             <p><strong>Will you be my Valentine, no matter the miles between us? ❤️</strong></p>
             
 
-            <p style="text-align: right;">- Yours forever</p>
+            <p style="text-align: right;">- Yours forever Chit Ya Sone Lay</p>
         </div>
     </div>
 
